@@ -21,6 +21,18 @@ export function RSVP() {
     }
   }, []);
 
+  useEffect(() => {
+    // Fetch existing RSVP data from Google Apps Script
+    fetch(API_URL)
+      .then((res) => res.json())
+      .then((data: RsvpEntry[]) => {
+        setAllRsvp(data || []);
+        const withMessage = (data || []).filter((item) => item.ucapan && item.ucapan.trim() !== "");
+        setComments([...withMessage].reverse());
+      })
+      .catch((err) => console.error("Error fetching RSVP:", err));
+  }, []);
+
   const totalHadir = allRsvp.filter(c => c.kehadiran === "Hadir").length;
   const totalAbsen = allRsvp.filter(c => c.kehadiran === "Tidak Hadir").length;
 

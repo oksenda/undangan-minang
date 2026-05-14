@@ -77,17 +77,17 @@ export function EventDetails() {
                 <p>{event.location}</p>
               </div>
 
-              <div className="map-embed">
-                <iframe
-                  src={event.embedUrl}
-                  width="100%"
-                  height="200"
-                  style={{ border: 0 }}
-                  allowFullScreen=""
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="Lokasi acara"
-                />
+               <div className="map-embed">
+                 <iframe
+                   src={event.embedUrl}
+                   width="100%"
+                   height="200"
+                   style={{ border: 0 }}
+                   allowFullScreen={true}
+                   loading="lazy"
+                   referrerPolicy="no-referrer-when-downgrade"
+                   title="Lokasi acara"
+                 />
               </div>
 
               <a
