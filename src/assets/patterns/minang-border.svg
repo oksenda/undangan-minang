@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 100" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#d4af37;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#f4e4bc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d4af37;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Traditional Minangkabau border pattern - VERTICAL -->
+  <g fill="none" stroke="url(#goldGradient)" stroke-width="1">
+    <!-- Main Rumah Gadang roof curve - vertical orientation -->
+    <path d="M15,0 Q0,15 15,30 Q30,45 15,60 Q0,75 15,90 Q30,100 15,100" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Horizontal decorative lines (appear as vertical bars in border context) -->
+    <path d="M8,10 L22,10 M8,30 L22,30 M8,50 L22,50 M8,70 L22,70 M8,90 L22,90" stroke-width="1.5" stroke-linecap="round"/>
+
+    <!-- Diamond/lintner cross motifs at intersections -->
+    <path d="M15,10 L20,15 L15,20 L10,15 Z" fill="url(#goldGradient)" stroke="none"/>
+    <path d="M15,30 L20,35 L15,40 L10,35 Z" fill="url(#goldGradient)" stroke="none"/>
+    <path d="M15,50 L20,55 L15,60 L10,55 Z" fill="url(#goldGradient)" stroke="none"/>
+    <path d="M15,70 L20,75 L15,80 L10,75 Z" fill="url(#goldGradient)" stroke="none"/>
+    <path d="M15,90 L20,95 L15,100 L10,95 Z" fill="url(#goldGradient)" stroke="none"/>
+  </g>
+</svg>

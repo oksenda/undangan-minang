@@ -1,0 +1,176 @@
+.gift-card {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  min-height: 220px;
+  border-radius: 16px;
+  border: 2px solid;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+}
+
+.gift-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(105deg, transparent 40%, rgba(255, 255, 255, 0.1) 45%, rgba(255, 255, 255, 0.05) 50%, transparent 55%);
+  pointer-events: none;
+}
+
+.gift-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.gift-card-chip {
+  width: 50px;
+  height: 35px;
+  margin-bottom: 1rem;
+}
+
+.gift-card-chip svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.gift-card-provider-badge {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.gift-card-provider-badge span:first-child {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.gift-card-type-label {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.gift-card-number {
+  font-family: 'Courier New', monospace;
+  font-size: 1.3rem;
+  color: #fff;
+  letter-spacing: 0.15em;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.gift-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: auto;
+}
+
+.gift-card-holder {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.gift-card-holder .label {
+  font-size: 0.65rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.gift-card-holder .name {
+  font-size: 1rem;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.gift-card-logo {
+  width: 60px;
+  height: 30px;
+  opacity: 0.8;
+}
+
+.gift-card-logo svg {
+  width: 100%;
+  height: 100%;
+}
+
+.gift-card-copy-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0.75rem;
+  background: rgba(212, 175, 55, 0.9);
+  color: #1a1a2e;
+  border: none;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.gift-card-copy-btn:hover {
+  background: #d4af37;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.4);
+}
+
+@media (max-width: 768px) {
+  .gift-card {
+    min-height: 200px;
+    padding: 1.25rem;
+  }
+
+  .gift-card-number {
+    font-size: 1.1rem;
+  }
+
+  .gift-card-provider-badge span:first-child {
+    font-size: 1.2rem;
+  }
+
+  .gift-card-holder .name {
+    font-size: 0.9rem;
+    max-width: 150px;
+  }
+
+  .gift-card-copy-btn {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.7rem;
+  }
+}

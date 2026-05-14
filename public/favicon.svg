@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="favGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#d4af37"/>
+      <stop offset="100%" style="stop-color:#8b4513"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Circle background -->
+  <circle cx="50" cy="50" r="48" fill="#1a0a0a"/>
+  
+  <!-- Stylized intertwined rings (wedding symbol) -->
+  <g fill="none" stroke="url(#favGold)" stroke-width="3" stroke-linecap="round">
+    <!-- Left ring (partial) -->
+    <ellipse cx="35" cy="50" rx="12" ry="14" transform="rotate(-30 35 50)"/>
+    
+    <!-- Right ring (partial) -->
+    <ellipse cx="65" cy="50" rx="12" ry="14" transform="rotate(30 65 50)"/>
+  </g>
+  
+  <!-- Small decorative dots -->
+  <circle cx="50" cy="20" r="3" fill="#d4af37"/>
+  <circle cx="30" cy="80" r="2" fill="#d4af37"/>
+  <circle cx="70" cy="80" r="2" fill="#d4af37"/>
+</svg>

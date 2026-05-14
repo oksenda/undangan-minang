@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="logoGold" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#d4af37;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8b4513;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Stylized Rumah Gadang (Minangkabau traditional house) silhouette -->
+  <g fill="url(#logoGold)">
+    <!-- Main roof (multiple tiers) -->
+    <polygon points="50,5 20,35 25,30 35,30 35,35 65,35 65,30 75,30 80,35"/>
+    <polygon points="50,20 25,45 30,40 40,40 40,45 60,45 60,40 70,40 75,45"/>
+    
+    <!-- Central body -->
+    <rect x="35" y="45" width="30" height="35" rx="2"/>
+    
+    <!-- Traditional door -->
+    <rect x="42" y="50" width="16" height="25" rx="8" fill="#1a0a0a"/>
+    
+    <!-- Window motifs (small circles representing traditional windows) -->
+    <circle cx="42" cy="65" r="2"/>
+    <circle cx="58" cy="65" r="2"/>
+    
+    <!-- Roof finial (dengkur) - the distinctive buffalo-horn roof curve -->
+    <path d="M45,22 Q50,12 55,22" fill="none" stroke="url(#logoGold)" stroke-width="2"/>
+    <circle cx="50" cy="15" r="3" fill="url(#logoGold)"/>
+  </g>
+  
+  <!-- Decorative border -->
+  <circle cx="50" cy="50" r="48" fill="none" stroke="url(#logoGold)" stroke-width="1" opacity="0.5"/>
+  <circle cx="50" cy="50" r="44" fill="none" stroke="url(#logoGold)" stroke-width="0.5" opacity="0.3"/>
+</svg>

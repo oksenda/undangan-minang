@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="frameGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#d4af37;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#f4e4bc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d4af37;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Frame corners -->
+  <path d="M0,30 L0,0 L30,0" fill="none" stroke="url(#frameGold)" stroke-width="3" stroke-linecap="round"/>
+  <path d="M70,0 L100,0 L100,30" fill="none" stroke="url(#frameGold)" stroke-width="3" stroke-linecap="round"/>
+  <path d="M100,70 L100,100 L70,100" fill="none" stroke="url(#frameGold)" stroke-width="3" stroke-linecap="round"/>
+  <path d="M30,100 L0,100 L0,70" fill="none" stroke="url(#frameGold)" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Decorative circles at corners -->
+  <circle cx="5" cy="5" r="4" fill="none" stroke="url(#frameGold)" stroke-width="1.5"/>
+  <circle cx="95" cy="5" r="4" fill="none" stroke="url(#frameGold)" stroke-width="1.5"/>
+  <circle cx="95" cy="95" r="4" fill="none" stroke="url(#frameGold)" stroke-width="1.5"/>
+  <circle cx="5" cy="95" r="4" fill="none" stroke="url(#frameGold)" stroke-width="1.5"/>
+  
+  <!-- Inner decorative lines -->
+  <g stroke="url(#frameGold)" stroke-width="1" fill="none" opacity="0.7">
+    <path d="M10,10 L10,40 M10,10 L40,10"/>
+    <path d="M90,10 L90,40 M90,10 L60,10"/>
+    <path d="M90,90 L90,60 M90,90 L60,90"/>
+    <path d="M10,90 L10,60 M10,90 L40,90"/>
+  </g>
+  
+  <!-- Traditional Minangkabau wave pattern -->
+  <g stroke="url(#frameGold)" stroke-width="1.5" fill="none" opacity="0.5">
+    <path d="M20,50 Q35,40 50,50 Q65,60 80,50" stroke-linecap="round"/>
+    <path d="M25,25 Q40,15 50,25 Q60,35 75,25" stroke-linecap="round" stroke-width="1"/>
+    <path d="M25,75 Q40,85 50,75 Q60,65 75,75" stroke-linecap="round" stroke-width="1"/>
+  </g>
+</svg>

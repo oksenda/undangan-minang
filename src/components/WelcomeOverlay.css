@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Lato:wght@300;400;700&display=swap');
+
+.welcome-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, #f5e6d3 0%, #fff 50%, #f5e6d3 100%);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.5s ease;
+  overflow: hidden;
+}
+
+/* Subtle pattern overlay */
+.welcome-overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/assets/images/quote-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.08;
+  pointer-events: none;
+}
+
+.welcome-content {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+}
+
+.welcome-pattern {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background-image: url('/assets/images/downloaded/minang-pattern.png');
+  background-repeat: repeat-x;
+  background-size: 120px 80px;
+  opacity: 0.4;
+}
+
+.welcome-pattern-top {
+  top: 0;
+}
+
+.welcome-pattern-bottom {
+  bottom: 0;
+  transform: rotate(180deg);
+}
+
+.welcome-inner {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+/* Rumah Gadang using quote-bg image */
+.rumah-gadang-decoration {
+  width: 100%;
+  max-width: 300px;
+  height: 120px;
+  margin-bottom: 0.5rem;
+  background-image: url('/assets/images/quote-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 100%, 0% 100%, 0% 25%);
+  filter: drop-shadow(0 6px 12px rgba(212, 175, 55, 0.4));
+  opacity: 0.8;
+  animation: floatIn 1s ease-out 0.3s both;
+}
+
+/* Rumah Gadang Pure CSS Decoration */
+.rumah-gadang-element {
+  width: 100%;
+  max-width: 280px;
+  height: 140px;
+  margin-bottom: 0.5rem;
+  animation: floatIn 1s ease-out 0.3s both;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.rumah-gadang-body {
+  position: relative;
+  width: 200px;
+  height: 80px;
+  background: linear-gradient(180deg, rgba(212, 175, 55, 0.2) 0%, rgba(212, 175, 55, 0.05) 100%);
+  border: 2px solid rgba(212, 175, 55, 0.4);
+  border-bottom: 4px solid #d4af37;
+}
+
+.rumah-gadang-roof {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 110px solid transparent;
+  border-right: 110px solid transparent;
+  border-bottom: 55px solid rgba(212, 175, 55, 0.5);
+  filter: drop-shadow(0 4px 8px rgba(212, 175, 55, 0.3));
+}
+
+.rumah-gadang-roof::before {
+  content: '';
+  position: absolute;
+  top: -45px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 90px solid transparent;
+  border-right: 90px solid transparent;
+  border-bottom: 45px solid rgba(212, 175, 55, 0.35);
+}
+
+.rumah-gadang-roof::after {
+  content: '';
+  position: absolute;
+  top: -38px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 70px solid transparent;
+  border-right: 70px solid transparent;
+  border-bottom: 38px solid rgba(212, 175, 55, 0.5);
+}
+
+.rumah-gadang-pillars {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 25px;
+  box-sizing: border-box;
+}
+
+.rumah-gadang-pillars span {
+  width: 8px;
+  height: 100%;
+  background: linear-gradient(180deg, #d4af37, #8b4513);
+  border-radius: 2px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.welcome-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  color: #2d1810;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  opacity: 0.8;
+  margin: 0;
+}
+
+.welcome-couple {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1rem 0;
+}
+
+.welcome-photo-wrapper {
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+
+.welcome-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #d4af37;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.photo-decorator {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border: 2px solid #d4af37;
+  border-radius: 50%;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.welcome-ampersand {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: #d4af37;
+  font-style: italic;
+  font-weight: 700;
+}
+
+.welcome-names {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: #2d1810;
+  margin: 0;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+}
+
+.welcome-subtitle {
+  font-size: 1.1rem;
+  color: #5a4030;
+  font-style: italic;
+  margin: 0;
+  max-width: 400px;
+  line-height: 1.6;
+}
+
+.welcome-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.25rem 2.5rem;
+  background: linear-gradient(135deg, #d4af37 0%, #8b4513 100%);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1.5rem;
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+  letter-spacing: 0.1em;
+}
+
+.welcome-button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 12px 35px rgba(212, 175, 55, 0.5);
+}
+
+.welcome-button svg {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.welcome-button:hover svg {
+  transform: translateX(5px);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes floatIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .welcome-content {
+    padding: 1.5rem;
+  }
+
+  .welcome-inner {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    gap: 1.25rem;
+  }
+
+  .rumah-gadang-decoration {
+    max-width: 240px;
+    height: 100px;
+  }
+
+  .welcome-title {
+    font-size: 0.9rem;
+    letter-spacing: 0.3em;
+  }
+
+  .welcome-photo-wrapper {
+    width: 120px;
+    height: 120px;
+  }
+
+  .welcome-ampersand {
+    font-size: 2.5rem;
+  }
+
+  .welcome-names {
+    font-size: 1.8rem;
+  }
+
+  .welcome-subtitle {
+    font-size: 1rem;
+  }
+
+  .welcome-button {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-couple {
+    gap: 1.25rem;
+  }
+
+  .rumah-gadang-decoration {
+    max-width: 200px;
+    height: 80px;
+    margin-bottom: 0.25rem;
+  }
+
+  .welcome-photo-wrapper {
+    width: 100px;
+    height: 100px;
+  }
+
+  .welcome-ampersand {
+    font-size: 2rem;
+  }
+
+  .welcome-names {
+    font-size: 1.5rem;
+    letter-spacing: 0.08em;
+  }
+
+  .welcome-subtitle {
+    font-size: 0.9rem;
+    padding: 0 1rem;
+    line-height: 1.5;
+  }
+
+  .welcome-button {
+    padding: 0.875rem 1.75rem;
+    font-size: 1rem;
+    letter-spacing: 0.08em;
+  }
+
+  .welcome-inner {
+    gap: 1rem;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}

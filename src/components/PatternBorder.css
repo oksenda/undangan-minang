@@ -1,0 +1,83 @@
+.pattern-border {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 50px;
+  z-index: 100;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.pattern-border-left {
+  left: 0;
+  background: linear-gradient(90deg, rgba(45, 24, 16, 0.95) 0%, rgba(45, 24, 16, 0.85) 50%, transparent 100%);
+}
+
+.pattern-border-right {
+  right: 0;
+  background: linear-gradient(-90deg, rgba(45, 24, 16, 0.95) 0%, rgba(45, 24, 16, 0.85) 50%, transparent 100%);
+}
+
+/* Right side: mirror for symmetry */
+.pattern-border-right .pattern-container {
+  transform: scaleX(-1);
+}
+
+@media (max-width: 768px) {
+  .pattern-border {
+    width: 35px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pattern-border {
+    width: 25px;
+  }
+}
+
+.pattern-border-left {
+  left: 0;
+  background: linear-gradient(90deg, rgba(45, 24, 16, 0.98) 0%, rgba(45, 24, 16, 0.9) 60%, transparent 100%);
+}
+
+.pattern-border-right {
+  right: 0;
+  background: linear-gradient(-90deg, rgba(45, 24, 16, 0.98) 0%, rgba(45, 24, 16, 0.9) 60%, transparent 100%);
+}
+
+.pattern-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/src/assets/patterns/minang-border.svg');
+  background-repeat: repeat-y;
+  background-size: 100% auto;
+  opacity: 0.85;
+}
+
+/* Rotate right side pattern for proper orientation */
+.pattern-border-right .pattern-container {
+  transform: scaleX(-1);
+}
+
+@media (max-width: 768px) {
+  .pattern-border {
+    width: 35px;
+  }
+
+  .pattern-container {
+    background-size: 100% auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .pattern-border {
+    width: 25px;
+  }
+
+  .pattern-container {
+    background-size: 100% auto;
+  }
+}

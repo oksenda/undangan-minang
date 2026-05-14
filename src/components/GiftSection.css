@@ -1,0 +1,152 @@
+.gift-section {
+  padding: 4rem 2rem;
+  background: linear-gradient(180deg, #fff 0%, #f5e6d3 100%);
+  position: relative;
+}
+
+.gift-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  background-image: url('/assets/images/downloaded/minang-pattern.png');
+  background-repeat: repeat-x;
+  background-size: 80px 40px;
+  opacity: 0.2;
+}
+
+.gift-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  background-image: url('/assets/images/downloaded/minang-pattern.png');
+  background-repeat: repeat-x;
+  background-size: 80px 40px;
+  opacity: 0.2;
+  transform: rotate(180deg);
+}
+
+.gift-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  background-image: url('/assets/images/downloaded/minang-pattern.png');
+  background-repeat: repeat-x;
+  background-size: 60px 30px;
+  opacity: 0.2;
+}
+
+.gift-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  background-image: url('/assets/images/downloaded/minang-pattern.png');
+  background-repeat: repeat-x;
+  background-size: 60px 30px;
+  opacity: 0.2;
+  transform: rotate(180deg);
+}
+
+.gift-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.gift-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: #2d1810;
+  margin-bottom: 1rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.gift-subtitle {
+  color: #5a4030;
+  font-size: 1.05rem;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gift-cards-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.copy-notification {
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background: #4caf50;
+  color: white;
+  border-radius: 50px;
+  font-weight: 600;
+  display: inline-block;
+  animation: fadeInUp 0.3s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .gift-title {
+    font-size: 1.6rem;
+  }
+
+  .gift-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .gift-cards-grid {
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .gift-section {
+    padding: 3rem 1rem;
+  }
+
+  .gift-title {
+    font-size: 1.4rem;
+    letter-spacing: 0.15em;
+  }
+
+  .gift-subtitle {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .gift-cards-grid {
+    gap: 1rem;
+  }
+
+  .copy-notification {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+  }
+}

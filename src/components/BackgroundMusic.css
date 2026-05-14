@@ -1,0 +1,132 @@
+.background-music {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.music-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #d4af37, #8b4513);
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.music-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+}
+
+.music-button:active {
+  transform: scale(0.95);
+}
+
+.music-button svg {
+  width: 24px;
+  height: 24px;
+}
+
+.music-button.playing {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
+  50% {
+    box-shadow: 0 4px 25px rgba(212, 175, 55, 0.6);
+  }
+}
+
+.volume-control {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 0.5rem 0.75rem;
+  border-radius: 25px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.volume-slider {
+  width: 80px;
+  height: 4px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: #d4af37;
+  border-radius: 2px;
+  outline: none;
+}
+
+.volume-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  background: #8b4513;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.volume-slider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  background: #8b4513;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+}
+
+.mute-button {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+
+@media (max-width: 480px) {
+  .background-music {
+    bottom: 12px;
+    right: 12px;
+  }
+
+  .music-button {
+    width: 42px;
+    height: 42px;
+  }
+
+  .music-button svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .volume-control {
+    display: none;
+  }
+}
+
+@media (max-width: 320px) {
+  .background-music {
+    bottom: 10px;
+    right: 10px;
+  }
+
+  .music-button {
+    width: 38px;
+    height: 38px;
+  }
+}

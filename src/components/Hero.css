@@ -1,0 +1,175 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    180deg,
+    #f5e6d3 0%,
+    #fff 50%,
+    #f5e6d3 100%
+  );
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.hero.visible {
+  opacity: 1;
+}
+
+.hero-pattern {
+  position: absolute;
+  width: 100%;
+  height: 40px;
+  background-image: url('/assets/images/downloaded/minang-pattern.png');
+  background-repeat: repeat-x;
+  background-size: 80px 40px;
+  z-index: 1;
+  opacity: 0.5;
+}
+
+.hero-pattern-top {
+  top: 0;
+}
+
+.hero-pattern-bottom {
+  bottom: 0;
+  transform: rotate(180deg);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeInUp 1.5s ease-out;
+}
+
+.hero-decoration {
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 1rem;
+}
+
+.hero-decoration-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  color: #2d1810;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+.hero-couple {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.couple-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: #2d1810;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.couple-ampersand {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #d4af37;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.couple-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  color: #2d1810;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.couple-ampersand {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: #d4af37;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.hero-date {
+  font-size: 1.2rem;
+  color: #2d1810;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-transform: capitalize;
+}
+
+.hero-subtitle {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  color: #2d1810;
+  font-weight: 400;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 1rem;
+  }
+
+  .couple-name {
+    font-size: 2rem;
+  }
+
+  .couple-ampersand {
+    font-size: 1.5rem;
+  }
+
+  .hero-date {
+    font-size: 1rem;
+  }
+
+  .hero-decoration-img {
+    max-width: 90%;
+  }
+
+  .hero-pattern {
+    height: 50px;
+    background-size: 100px 50px;
+  }
+}
