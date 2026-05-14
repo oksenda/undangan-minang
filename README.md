@@ -5,7 +5,7 @@ Undangan pernikahan online dengan tema Minangkabau tradisional. Dibuat dengan Re
 ## 🎯 Fitur Utama
 
 - **Hero Section**: Sambutan dengan tema "Maimbau Baralek" dan countdown interaktif
-- **Countdown**: Hitung mundurリアルタイム menuju hari pernikahan
+- **Countdown**: Hitung menuju hari pernikahan
 - **Profil Mempelai**: Foto dan informasi lengkap mempelai beserta orang tua
 - **Save The Date**: Detail acara Akad Nikah dan Resepsi
 - **Quote Section**: Ayat Al-Quran(QS. Ar-Rum: 21) dengan dekorasi Islamic
