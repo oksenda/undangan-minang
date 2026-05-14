@@ -10,6 +10,7 @@ import { Footer } from './components/Footer';
 import { BackgroundMusic } from './components/BackgroundMusic';
 import { WelcomeOverlay } from './components/WelcomeOverlay';
 import { PatternBorder } from './components/PatternBorder';
+import { GuestGreeting } from './components/GuestGreeting';
 import './App.css';
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
     <div className="app">
       <PatternBorder />
       {isWelcomeOpen && <WelcomeOverlay onOpen={handleWelcomeOpen} />}
+      <GuestGreeting />
       <Hero />
       <Countdown />
       <CoupleInfo />

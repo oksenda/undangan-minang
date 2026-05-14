@@ -177,7 +177,32 @@
   letter-spacing: 0.5em;
   text-transform: uppercase;
   opacity: 0.8;
+  margin: 0 0 1rem 0;
+}
+
+.welcome-greeting {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.greeting-salam {
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+  color: #5a4030;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  margin: 0 0 0.5rem 0;
+}
+
+.greeting-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: #d4af37;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
   margin: 0;
+  text-shadow: 0 2px 4px rgba(212, 175, 55, 0.3);
 }
 
 .welcome-couple {
@@ -306,6 +331,18 @@
     gap: 1.25rem;
   }
 
+  .welcome-greeting {
+    margin-bottom: 0.75rem;
+  }
+
+  .greeting-salam {
+    font-size: 0.95rem;
+  }
+
+  .greeting-name {
+    font-size: 1.4rem;
+  }
+
   .rumah-gadang-decoration {
     max-width: 240px;
     height: 100px;
@@ -342,6 +379,18 @@
 @media (max-width: 480px) {
   .welcome-couple {
     gap: 1.25rem;
+  }
+
+  .welcome-greeting {
+    margin-bottom: 0.5rem;
+  }
+
+  .greeting-salam {
+    font-size: 0.9rem;
+  }
+
+  .greeting-name {
+    font-size: 1.3rem;
   }
 
   .rumah-gadang-decoration {

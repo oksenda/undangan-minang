@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { weddingDataV2 } from '../data/weddingV2';
 import { CONFIG } from '../config';
 import './RSVP.css';
 
@@ -8,21 +7,18 @@ type RsvpEntry = { nama: string; kehadiran: string; ucapan: string };
 const API_URL = CONFIG.rsvpUrl;
 
 export function RSVP() {
-  const [formData, setFormData] = useState({ nama: "", kehadiran: "Hadir", ucapan: "" });
+  const [formData, setFormData] = useState({ nama: "Tamu Terhormat", kehadiran: "Hadir", ucapan: "" });
   const [comments, setComments] = useState<RsvpEntry[]>([]);
   const [allRsvp, setAllRsvp] = useState<RsvpEntry[]>([]);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    // Fetch existing RSVP data from Google Apps Script
-    fetch(API_URL)
-      .then((res) => res.json())
-      .then((data: RsvpEntry[]) => {
-        setAllRsvp(data || []);
-        const withMessage = (data || []).filter((item) => item.ucapan && item.ucapan.trim() !== "");
-        setComments([...withMessage].reverse());
-      })
-      .catch((err) => console.error("Error fetching RSVP:", err));
+    // Get guest name from URL parameter ?to=
+    const params = new URLSearchParams(window.location.search);
+    const to = params.get('to');
+    if (to) {
+      setFormData(prev => ({ ...prev, nama: to }));
+    }
   }, []);
 
   const totalHadir = allRsvp.filter(c => c.kehadiran === "Hadir").length;

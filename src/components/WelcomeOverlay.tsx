@@ -1,12 +1,21 @@
 
+import { useEffect, useState } from 'react';
 import { weddingDataV2 } from '../data/weddingV2';
 import './WelcomeOverlay.css';
 
 export function WelcomeOverlay({ onOpen }: { onOpen: () => void }) {
   const { pengantin } = weddingDataV2;
+  const [guestName, setGuestName] = useState<string>('Tamu Terhormat');
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const to = params.get('to');
+    if (to) {
+      setGuestName(to);
+    }
+  }, []);
 
   const handleOpen = () => {
-    // Don't save to localStorage - always show on reload
     onOpen();
   };
 
@@ -17,6 +26,12 @@ export function WelcomeOverlay({ onOpen }: { onOpen: () => void }) {
 
         <div className="welcome-inner">
           <h1 className="welcome-title">Invitation</h1>
+
+          {/* Salam sapaan - jika ada parameter ?to= nama maka tampilkan nama */}
+          <div className="welcome-greeting">
+            <p className="greeting-salam">Assalamu'alaikum warahmatullahi wabarakatuh</p>
+            <p className="greeting-name">{guestName}</p>
+          </div>
 
           {/* Rumah Gadang decoration using quote-bg image */}
           <div className="rumah-gadang-decoration"></div>
