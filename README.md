@@ -9,7 +9,7 @@ Undangan pernikahan online dengan tema Minangkabau tradisional. Dibuat dengan Re
 - **Profil Mempelai**: Foto dan informasi lengkap mempelai beserta orang tua
 - **Save The Date**: Detail acara Akad Nikah dan Resepsi
 - **Quote Section**: Ayat Al-Quran(QS. Ar-Rum: 21) dengan dekorasi Islamic
-- **RSVP Form**: Konfirmasi kehadiran dengan statistik实时
+- **RSVP Form**: Konfirmasi kehadiran dengan statistik
 - **Daftar Tamu**: Tampilan tamu yang telah konfirmasi
 - **Footer**: Informasi kontak, undangan tambahan, dan galang
 
