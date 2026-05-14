@@ -112,7 +112,7 @@
 }
 
 .greeting-text {
-  color: rgba(255, 255, 255, 0.9);
+  color: #ffffff !important;
   font-size: 1.05rem;
   line-height: 1.7;
   max-width: 600px;
@@ -260,9 +260,10 @@
     font-size: 1.6rem;
   }
 
-  .greeting-text {
-    font-size: 1rem;
-  }
+   .greeting-text {
+     color: #d4af37;
+     font-size: 1rem;
+   }
 
   .social-links {
     flex-direction: column;
@@ -301,11 +302,12 @@
     letter-spacing: 0.08em;
   }
 
-  .greeting-text {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    max-width: 100%;
-  }
+   .greeting-text {
+     color: #d4af37;
+     font-size: 0.95rem;
+     line-height: 1.6;
+     max-width: 100%;
+   }
 
   .footer-islamic-greeting {
     font-size: 1.1rem;

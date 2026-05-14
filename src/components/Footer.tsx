@@ -35,7 +35,7 @@ export function Footer() {
         </div>
 
         <div className="footer-greeting">
-          <p className="greeting-text">Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i dapat berkenan hadir dan memberikan do'a restu</p>
+          <p className='greeting-text'>Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i dapat berkenan hadir dan memberikan do'a restu</p>
           <p className="footer-islamic-greeting">Wassalamu'alaikum Wr. Wb.</p>
         </div>
 
