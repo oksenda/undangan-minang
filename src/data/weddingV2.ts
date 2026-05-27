@@ -28,12 +28,12 @@ export const weddingDataV2: WeddingDataV2 = {
     maleMembers: [
       "Ayah: Faifil Misson",
       "Ibu: Linda Wati",
-      "Adik: Salsa"
+      "Adik: Salsabila Haifa Izlin"
     ],
     femaleMembers: [
       "Ayah: Candra Gusra",
       "Ibu: Darmawati",
-      "Adik: Ain"
+      "Adik: Aina Nuur Adlina"
     ]
   },
   assets: {
