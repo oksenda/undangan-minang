@@ -1,24 +1,18 @@
 import type { GiftCardProps, WeddingConfig } from '../types';
 
 export const GIFT_ACCOUNTS: GiftCardProps[] = [
-  {
-    provider: "BCA",
-    type: "BANK",
-    accountNumber: "1234567890",
-    owner: "Kiki Putra"
-  },
-  {
-    provider: "Dana",
-    type: "DANA",
-    accountNumber: "081234567890",
-    owner: "Nia Aprilia"
-  },
-  {
-    provider: "OVO",
-    type: "OVO",
-    accountNumber: "081298765432",
-    owner: "Nia Aprilia"
-  }
+    {
+      provider: "BNI",
+      type: "BANK",
+      accountNumber: "1922868531",
+      owner: "Nia Yabunaiya",
+    },
+    {
+      provider: "BRI",
+      type: "BANK",
+      accountNumber: "542701023599530",
+      owner: "Nia Yabunaiya",
+    },
 ];
 
 export const CONFIG: WeddingConfig = {
